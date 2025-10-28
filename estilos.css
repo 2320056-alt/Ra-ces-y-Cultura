@@ -1,0 +1,442 @@
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f5f5f5;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+/* ========================================
+   BARRA SUPERIOR ESTILO VOGUE
+   ======================================== */
+
+.vogue-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.vogue-header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-center {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-center h1 {
+    font-family: 'Didot', 'Bodoni MT', 'Times New Roman', serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    color: #000;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.logo-center .subtitle {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #666;
+    margin-top: 5px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+}
+
+.revista-name {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 3px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+}
+
+/* Menú lateral */
+.side-menu {
+    position: fixed;
+    left: -350px;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu-header {
+    padding: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-menu-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.close-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.close-menu:hover {
+    opacity: 0.6;
+}
+
+.side-menu nav ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.side-menu nav ul li {
+    padding: 15px 30px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.side-menu nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    transition: color 0.3s;
+    display: block;
+}
+
+.side-menu nav ul li a:hover {
+    color: #999;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1500;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+   ENCABEZADO PRINCIPAL
+   ======================================== */
+
+.main-header {
+    background-color: #e8dcc4;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 60px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.main-title {
+    font-size: 4em;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.main-header p {
+    text-align: center;
+    font-size: 0.95em;
+    color: #333;
+    margin: 8px 0;
+}
+
+/* ========================================
+   MENÚ DE NAVEGACIÓN
+   ======================================== */
+
+.main-nav {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 40px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.main-nav h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+.main-nav li {
+    margin-bottom: 12px;
+    break-inside: avoid;
+}
+
+.main-nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.main-nav a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL - SECCIONES
+   ======================================== */
+
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 60px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    min-height: 400px;
+}
+
+/* Portada con color beige */
+#portada {
+    background-color: #e8dcc4;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #000;
+    padding-bottom: 15px;
+}
+
+/* ========================================
+   ARTÍCULOS
+   ======================================== */
+
+.article {
+    margin-bottom: 40px;
+}
+
+.article-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.article-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+.article p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #222;
+}
+
+.article strong {
+    color: #000;
+    font-weight: bold;
+}
+
+.species-name {
+    font-size: 1.3em;
+    color: #000;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+/* ========================================
+   LISTAS
+   ======================================== */
+
+.article ul {
+    list-style-position: inside;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.article li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+/* ========================================
+   GALERÍA
+   ======================================== */
+
+.gallery-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.gallery-caption {
+    font-size: 0.95em;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ========================================
+   PIE DE PÁGINA
+   ======================================== */
+
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 40px 80px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.main-footer p {
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVO
+   ======================================== */
+
+@media (max-width: 768px) {
+    .main-header,
+    .main-nav,
+    .section,
+    .main-footer {
+        padding: 40px 30px;
+    }
+    
+    .main-title {
+        font-size: 2.5em;
+    }
+    
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .main-nav ul {
+        column-count: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header,
+    .main-nav,
+    .section,
+    .main-footer {
+        padding: 30px 20px;
+    }
+    
+    .main-title {
+        font-size: 2em;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+    }
+}
